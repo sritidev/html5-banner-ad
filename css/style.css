@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+  }
+  
+  .banner {
+    width:600px;
+    height: 600px;
+    display: flex;
+    background: linear-gradient(135deg, #ff3e6c, #ff8a00);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 50px;
+  }
+
+  /* Sizes */
+.size-300x250 {
+    width: 300px;
+    height: 250px;
+  }
+
+  .size-600x400 {
+    width: 600px;
+    height: 400px;
+  }
+  
+  .size-728x90 {
+    width: 728px;
+    height: 90px;
+  }
+  
+  .size-160x600 {
+    width: 160px;
+    height: 600px;
+    flex-direction: column;
+  }
+  
+  /* Adjust layout for tall banner */
+  .size-160x600 .right img {
+    max-width: 100px;
+  }
+  
+  /* LEFT CONTENT */
+  .left {
+    flex: 1;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px; 
+    position: relative;
+    z-index: 2;
+  }
+  
+  .left h1 {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+  
+  .left p {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+  
+  /* CTA */
+  
+  .cta {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  
+    padding: 8px 16px;
+    background: #fff;
+    color: #ff3e6c;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  
+    z-index: 10; /* always on top */
+  }
+  
+  .cta:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  /* RIGHT IMAGE */
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .right img {
+    max-width: 130px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,255,255, 0.6);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+    }
+  }
+  
+  .cta {
+    animation: pulse 2s infinite;
+  }
